@@ -65,7 +65,7 @@ class ProcessorView(APIView):
             "title": ' '.join(temp_sta).title(),
             "description": description,
             "description_tags":hash_tag_str.rstrip(', '),
-            "tags": tags,
+            "tags": ', '.join(tags),
         }
         return Response(response, status=status.HTTP_200_OK)
 
