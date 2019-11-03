@@ -34,9 +34,9 @@ class ProcessorView(APIView):
 
         # ==================  Tags Calculation start  ==================
         if city !="":
-            text = text.strip()+" "+city
+            text = text.strip()+" "+city.lower()
         if state !="":
-            text = text+" "+state
+            text = text+" "+state.lower()
 
         splited_text_arr = text.strip().split()
         temp_sta = []
@@ -44,6 +44,9 @@ class ProcessorView(APIView):
             if sta not in temp_sta:
                 temp_sta.append(sta)
         com_text_array = combinations(temp_sta)
+        with_hash_tag = ''
+        for tag in temp_sta:
+            with_hash_tag +='#' + tag.lower()
         tags = []
         for ca in com_text_array:
             connected_string = ""
@@ -51,20 +54,33 @@ class ProcessorView(APIView):
                 connected_string = connected_string + sca if connected_string == "" else connected_string + " " + sca
             tags.append(connected_string)
         empty_val = tags.pop(0)  # removing empty value
+        tags = tags    # as `combinations` is sending in desc data
 
         # ==================  Tags Calculation End  ==================
 
         # ==================  Description Calculation Start  ==================
         description = text + " - " + url + " if you are looking for " + text + ", then watch this video to learn everything to know about " + text
+
         hash_tag_str = ""
         for tag in tags:
-            hash_tag_str= hash_tag_str + "#"+tag+", "
+            hash_tag_str= hash_tag_str + "#"+tag.replace(" ","")+","
+        description_tags = hash_tag_str.rstrip(', ')
+
         # ==================  Description Calculation End  ==================
 
+        # ==================  Title Calculation Start  ==================
+
+        if city!="" and state!="":
+            temp_sta[-2] = "in "+temp_sta[-2]
+            title = ' '.join(temp_sta).title()
+        else:
+            title = ' '.join(temp_sta).title()
+
+        # ==================  Title Calculation End  ==================
         response = {
-            "title": ' '.join(temp_sta).title(),
+            "title": title + "    "+ with_hash_tag,
             "description": description,
-            "description_tags":hash_tag_str.rstrip(', '),
+            "description_tags":description_tags.lower(),
             "tags": ', '.join(tags),
         }
         return Response(response, status=status.HTTP_200_OK)
