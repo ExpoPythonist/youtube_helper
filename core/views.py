@@ -43,6 +43,7 @@ class ProcessorView(APIView):
         for sta in splited_text_arr:
             if sta not in temp_sta:
                 temp_sta.append(sta)
+        temp_sta = temp_sta[::-1]  # reversing
         com_text_array = combinations(temp_sta)
         with_hash_tag = ''
         for tag in temp_sta:
@@ -54,7 +55,7 @@ class ProcessorView(APIView):
                 connected_string = connected_string + sca if connected_string == "" else connected_string + " " + sca
             tags.append(connected_string)
         empty_val = tags.pop(0)  # removing empty value
-        tags = tags    # as `combinations` is sending in desc data
+        tags.append(text)     # adding actual element
 
         # ==================  Tags Calculation End  ==================
 

@@ -20,9 +20,9 @@ Request Body:
 Response Body:
 ```json
 {
-    "title": "Affordable Mortgage Dhaka Bangladesh",
-    "description": "affordable mortgage Dhaka Bangladesh - https://idlc.com/mbr/article.php if you are looking for affordable mortgage Dhaka Bangladesh, then watch this video to learn everything to know about affordable mortgage Dhaka Bangladesh",
-    "description_tags": "#Bangladesh, #Dhaka, #Dhaka Bangladesh, #mortgage, #mortgage Bangladesh, #Dhaka mortgage, #Dhaka mortgage Bangladesh, #affordable, #affordable Bangladesh, #affordable Dhaka, #affordable Dhaka Bangladesh, #affordable mortgage, #affordable mortgage Bangladesh, #affordable Dhaka mortgage, #affordable Dhaka mortgage Bangladesh",
-    "tags": "Bangladesh, Dhaka, Dhaka Bangladesh, mortgage, mortgage Bangladesh, Dhaka mortgage, Dhaka mortgage Bangladesh, affordable, affordable Bangladesh, affordable Dhaka, affordable Dhaka Bangladesh, affordable mortgage, affordable mortgage Bangladesh, affordable Dhaka mortgage, affordable Dhaka mortgage Bangladesh"
+    "title": "Bangladesh Dhaka In Mortgage Affordable    #bangladesh#dhaka#mortgage#affordable",
+    "description": "affordable mortgage dhaka bangladesh - https://idlc.com/mbr/article.php if you are looking for affordable mortgage dhaka bangladesh, then watch this video to learn everything to know about affordable mortgage dhaka bangladesh",
+    "description_tags": "#affordable,#mortgage,#affordablemortgage,#dhaka,#affordabledhaka,#mortgagedhaka,#affordablemortgagedhaka,#bangladesh,#affordablebangladesh,#bangladeshmortgage,#affordablebangladeshmortgage,#bangladeshdhaka,#affordablebangladeshdhaka,#bangladeshmortgagedhaka,#affordablebangladeshmortgagedhaka",
+    "tags": "affordable, mortgage, affordable mortgage, dhaka, affordable dhaka, mortgage dhaka, affordable mortgage dhaka, bangladesh, affordable bangladesh, bangladesh mortgage, affordable bangladesh mortgage, bangladesh dhaka, affordable bangladesh dhaka, bangladesh mortgage dhaka, affordable bangladesh mortgage dhaka"
 }
 ```
