@@ -80,7 +80,7 @@ class ProcessorView(APIView):
 
         # ==================  Title Calculation End  ==================
         response = {
-            "title": title + "    "+ with_hash_tag,
+            "title": title + "            "+ with_hash_tag,
             "description": description,
             "description_tags":description_tags.lower(),
             "tags": ', '.join(tags),
