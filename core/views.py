@@ -46,8 +46,9 @@ class ProcessorView(APIView):
         temp_sta = temp_sta[::-1]  # reversing
         com_text_array = combinations(temp_sta)
         with_hash_tag = ''
-        for tag in temp_sta:
-            with_hash_tag +='#' + tag.lower()
+        for tag in temp_sta[::-1]:    # reverse again for actual sequence
+            with_hash_tag +=tag.lower()
+        with_hash_tag="#"+with_hash_tag
         tags = []
         for ca in com_text_array:
             connected_string = ""
